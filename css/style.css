@@ -370,6 +370,7 @@ header {
     width: calc(100% + 2em);
     padding-left: 1em;
     padding-right: calc(200px + 4em);
+    align-content: center;
   }
 
   .about-me__img {
@@ -390,6 +391,17 @@ header {
 .my-work__title {
  margin-bottom: 3rem; 
 }
+
+.my-work__title::after {
+  content: '';  /* need to give content for pseudo element */
+  display: block;
+  width: 2em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  opacity: 0.5;
+}
+
 .projects {
   max-width: 1000px;
   margin: 0 auto;
