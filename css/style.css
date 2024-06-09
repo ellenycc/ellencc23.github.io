@@ -387,31 +387,95 @@ header {
   text-align: center;
 }
 
-.portfolio {
+.my-work__title {
+ margin-bottom: 3rem; 
+}
+.projects {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.portfolio__item {
-  display: flex;
-  /* background: var(--clr-accent); */
-  overflow: hidden;
-  margin-top: 4em;
+.projects__row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 3rem;
+  text-align: left;
+  place-items: center;
+  margin-bottom: 8rem;
 }
 
-.portfolio__img__container{
+
+.projects__row-img-cont {
+  overflow: hidden;
+  border: 10px solid var(--clr-accent);
+}
+
+.projects__row-content {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.projects__row-content-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.projects__row-img {
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.projects__row-content-desc-btn {
+  gap: 2rem;
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+  /* border-radius: 0.5rem; */
+  border: none;
+  padding: 10px 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.projects__row-content-desc-btn-cont {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 800px) {
+  .projects__row {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+
+  .projects__row-content {
+    align-items: center;
+  }
+}
+
+/*
+
+
+/* .portfolio__img__container{
   border: 10px solid var(--clr-accent)
 }
 
 .portfolio__img {
-  max-width: 500px;
-  height: 100%;
+  width: 100%;
   transition: 
     transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
-}
+} */
 
-.portfolio__item:focus {
+/* .portfolio__item:focus {
   position: relative;
   z-index: 2;
 }
@@ -425,7 +489,7 @@ header {
 .portfolio-item__info {
   margin-left: 2rem;
   text-align: left;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -447,7 +511,7 @@ header {
 
 a:link {
   text-decoration: none;
-}
+} */
 
 /* footer */
 
@@ -492,7 +556,7 @@ a:link {
 
 /*  Individual portfolio iten styles */
 
-.portfolio-item-individual {
+/* .portfolio-item-individual {
   padding: 0 2em 2em;
   max-width: 1000px;
   margin: 0 auto;
@@ -506,4 +570,4 @@ a:link {
 
 .portfolio-item-individual img {
   margin: 0 auto;
-}
+} */
